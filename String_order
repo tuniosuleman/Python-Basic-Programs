@@ -1,0 +1,26 @@
+list_e = [input('enter values of list: ') for i in range(int(input('enter lenght of string: ')))]
+middle_index =(len(list_e))//2
+
+for i in range(2):
+  f_half = list_e[:middle_index]
+  s_half = list_e[middle_index:]
+print('first half',f_half)
+print('second half',s_half)
+
+for i in range(len(f_half)-1):
+  for j in range(len(f_half)-1):
+    if f_half[j] > f_half[j+1]:
+      temp = f_half[j]
+      f_half[j] = f_half[j+1]
+      f_half[j+1] =temp
+#first half in ascending order
+print('first half in ascending order',f_half) 
+
+for i in range(len(s_half)-1):
+  for j in range(len(s_half)-1):
+    if s_half[j] < s_half[j+1]:
+      temp = s_half[j]
+      s_half[j] = s_half[j+1]
+      s_half[j+1] =temp
+#second half in descending order
+print('second half in descending order',s_half) 
