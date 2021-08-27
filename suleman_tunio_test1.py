@@ -14,7 +14,7 @@ pattern = input('Enter pattern: ')
 n = len(text)
 m = len(pattern)
 
-for i in range((n)):
+for i in range((n- m + 1)):
     j = 0
     while (j < m and pattern[j] == text[i+j]):
         j = j+1
